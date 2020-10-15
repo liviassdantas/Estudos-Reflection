@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reflection.Infraestrutura;
+using System;
 
 namespace Reflection
 {
@@ -6,7 +7,9 @@ namespace Reflection
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var prefixos = new string[] { "http://localhost:5341/" };
+            var webApplication = new WebApplication(prefixos);
+            webApplication.Iniciar();
         }
     }
 }
